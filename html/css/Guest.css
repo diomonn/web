@@ -1,0 +1,141 @@
+@import url(./index.css);
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3.75rem auto;
+    justify-items: center;
+}
+
+.f {
+    padding-top: .85rem;
+    position: relative;
+    width: 100%;
+    font-family: 'Source Han Sans CN';
+    display: flex;
+    text-indent: 2em;
+    border-bottom: 2px solid #ccc;
+    font-size: 2.25rem;
+}
+
+.Guest {
+    display: grid;
+    position: relative;
+    justify-items: center;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+}
+
+.Guest .msg {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    overflow-y: auto;
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.msg .a {
+    position: relative;
+    width: 54rem;
+    align-items: center;
+    height: 6.25rem;
+    box-shadow: 1px 2px 3px #71A0F1;
+    background: #666666;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 100%;
+    /* justify-content: space-between; */
+    margin-top: 1.625rem;
+}
+
+.msg .a:hover {
+    background: #A44343;
+}
+
+.msg .a:hover {
+    box-shadow: 1px 2px 10px #71A0F1;
+}
+
+.a img {
+    margin: .625rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+}
+
+.a .abox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 1.125rem;
+}
+
+.a .abox div:first-child {
+    width: 100%;
+    text-align: start;
+    font-weight: bold;
+}
+
+.a .abox div:nth-child(2) {
+    width: 100%;
+    text-indent: 3em;
+    text-align: start;
+}
+
+.a .abox div:nth-child(3) {
+    width: 100%;
+    text-align: end;
+}
+
+.input {
+    position: relative;
+    border: 1px solid black;
+    background: #71A0F1;
+    display: grid;
+    width: 25.25rem;
+    font-size: 1rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+input {
+    margin: .625rem;
+    width: 21.25rem;
+    height: 1rem;
+}
+
+.bth {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    padding-top: 1px;
+    text-align: center;
+    width: 6.5rem;
+    height: calc(2.5rem-10px);
+    border: 0;
+    border-radius: 1px;
+    box-shadow: 1px 2px 3px #71A0F1;
+}
+
+.bth:hover {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1px 2px 13px #71A0F1;
+}
+
+@media all and (min-width: 375px) and (max-width: 860px) {
+    .input {
+        width: 100%;
+    }
+    .msg .a {
+        width: 100%;
+    }
+    .f {
+        font-size: 1rem;
+    }
+}

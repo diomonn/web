@@ -1,0 +1,101 @@
+@import url(./index.css);
+.main {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 1fr;
+    background: #000;
+}
+
+.a {
+    width: 100%;
+    background: #000;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: .625rem;
+}
+
+.a .b {
+    text-align: center;
+    background: #fff;
+    font-family: 'Source Han Sans CN';
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+
+.a .b h3 {
+    font-size: 2.25rem;
+    position: relative;
+}
+
+.a .d {
+    background: #fff;
+}
+
+.c {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.c img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.d {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.d div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d div:first-child input {
+    margin: .625rem;
+    width: 18.75rem;
+    height: 3.9375rem;
+}
+
+.d div:first-child button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7.375rem;
+    height: 2.9375rem;
+    background: #71A0F1;
+    border: 0;
+    border-radius: 10px;
+}
+
+.d div:nth-child(2) {
+    margin-top: .625rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 16.8125rem;
+    height: 10.5rem;
+    text-align: center;
+}
+
+@media all and (min-width: 375px) and (max-width: 600px) {
+    .c {
+        display: none;
+    }
+    .a {
+        position: absolute;
+        width: 100%;
+    }
+    .a .d {
+        grid-template-columns: 100%;
+    }
+}

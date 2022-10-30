@@ -1,0 +1,24 @@
+@import url(./index.css);
+.main {
+    display: grid;
+    justify-items: center;
+}
+
+.bigbox {
+    overflow: auto;
+    position: relative;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(148, 141, 141);
+    border: 1px solid #000;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 1.4375rem;
+    color: rgb(3, 3, 3);
+}
+
+@media all and (min-width: 375px) and (max-width: 660px) {}

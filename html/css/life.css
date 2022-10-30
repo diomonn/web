@@ -1,0 +1,86 @@
+@import url(./index.css);
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3.75rem auto;
+}
+
+.f {
+    font-family: 'Source Han Sans CN';
+    display: flex;
+    align-items: flex-end;
+    color: #71A0F1;
+    text-indent: 4em;
+    border-bottom: 1px solid #ccc;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.T {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.T .t {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.T .t:nth-child(1),
+.t:nth-child(4),
+.t:nth-child(3),
+.t:nth-child(6) {
+    border-right: 0;
+    border-left: 0;
+}
+
+.t:nth-child(n+3) {
+    border-top: 0;
+}
+
+.T div .boxbox {
+    width: 15rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 12.5rem;
+}
+
+.T div .boxbox img {
+    position: relative;
+    width: 15rem;
+    background: #000;
+    height: 8.125rem;
+}
+
+.T div .boxbox div {
+    margin-top: -1.25rem;
+    width: 6.25rem;
+    background: #000;
+    height: 1.875rem;
+}
+
+@media all and (min-width: 375px) and (max-width: 660px) {
+    .T {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .T div {
+        width: 80%;
+        height: 80%;
+    }
+    .BIGBIG button {
+        margin: 0;
+    }
+    .f {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,82 @@
+@import url(./index.css);
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3.75rem auto;
+}
+
+.f {
+    font-family: 'Source Han Sans CN';
+    display: flex;
+    align-items: flex-end;
+    color: #71A0F1;
+    text-indent: 4em;
+    border-bottom: 1px solid #ccc;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.T {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.T div {
+    width: 21.875rem;
+    height: 10.375rem;
+    background: #000;
+    background: no-repeat;
+    background-size: cover;
+}
+
+.BIGBIG {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: #ccc;
+    align-items: center;
+    justify-content: center;
+}
+
+.BIGBIG img {
+    width: 70%;
+    height: 100%;
+}
+
+.BIGBIG button {
+    border: 0;
+    width: 8.5rem;
+    height: 3.75rem;
+    font-size: 2.25rem;
+    margin: 3.1875rem;
+}
+
+.BIGBIG button:hover {
+    color: #fff;
+    background: #000;
+}
+
+@media all and (min-width: 375px) and (max-width: 660px) {
+    .T {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .T div {
+        width: 80%;
+        height: 80%;
+    }
+    .BIGBIG img {
+        width: 70vw;
+        height: 80vw;
+    }
+    .BIGBIG button {
+        margin: 0;
+    }
+    .f {
+        font-size: 1.3rem;
+    }
+}

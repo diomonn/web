@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'YouSheBiaoTiHei';
+    src: url('../files/YouSheBiaoTiHei-2.ttf');
+}
+
+@font-face {
+    font-family: 'Source Han Sans CN';
+    src: url('../files/SourceHanSansSC-Regular-2.ttf');
+}
+
+ ::-webkit-scrollbar {
+    width: 2px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+ ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+/*定义滑块
+  内阴影+圆角*/
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+.container {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 60px 9fr 30px;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas: "header  header  header" "main     main    main" "footer  footer  footer";
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    border-bottom: 1px solid black;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 1px 1px 1px;
+}
+
+.header .headerImg {
+    position: relative;
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .headerLilk {
+    z-index: 1000;
+    position: relative;
+    /* width: 50%; */
+    opacity: 1;
+    font-family: 'YouSheBiaoTiHei';
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    font-size: 2.25rem;
+    letter-spacing: 0em;
+    color: #3D3D3D;
+}
+
+.header .headerLilk .L {
+    margin: .625rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    text-align: center;
+    grid-area: footer;
+    background-color: #000000;
+    color: rgb(136, 128, 128) !important;
+}
+
+.list {
+    top: 3rem;
+    position: absolute;
+    /* margin-left: -1.25rem !important; */
+    font-size: 1.5rem;
+    width: 6.25rem;
+    display: none;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+}
+
+.header .headerLilk .L:hover>.list {
+    display: flex;
+}
+
+@media all and (min-width: 375px) and (max-width: 660px) {
+    .header .headerImg {
+        display: none;
+    }
+    .header {
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+}
